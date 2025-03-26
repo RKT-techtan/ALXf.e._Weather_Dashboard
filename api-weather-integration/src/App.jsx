@@ -1,15 +1,13 @@
-import Mainpage from './components/Mainpage'
+import WeatherCard from './components/WeatherCard'
 import { useState } from 'react'
-import './App.css'
+import { Component } from 'react'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <Mainpage/>
+  <div>
+    <WeatherCard/>
     </div>
-  )
-}
+    )
+};
 
-export default App
+export default App;
