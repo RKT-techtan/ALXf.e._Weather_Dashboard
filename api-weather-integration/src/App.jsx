@@ -1,13 +1,19 @@
-import WeatherCard from './components/WeatherCard'
-import { useState } from 'react'
-import { Component } from 'react'
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import WeatherCard from "./components/WeatherCard.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import SearchBar from "./components/SearchBar.jsx";
 
 function App() {
   return (
-  <div>
-    <WeatherCard/>
-    </div>
-    )
+  <Router>
+    <Routes>
+      <Route exact path="/" element={<WeatherCard/>}/>
+      <Route exact path="/SearchBar" element={<SearchBar/>}/>
+      <Route exact path="/Dashboard" element={<Dashboard/>}/>
+    </Routes>
+  </Router>
+  )
 };
 
 export default App;
